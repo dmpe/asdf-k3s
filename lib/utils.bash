@@ -40,7 +40,8 @@ download_release() {
 	machine_hardware_name=$(uname -m)
 	case "${machine_hardware_name}" in
 		'x86_64') local cpu_type='' ;; # amd64 is default
-		'aarch64') local cpu_type='-arm64' ;;
+		'arm64') local cpu_type='-arm64' ;;
+  		'aarch64') local cpu_type='-arm64' ;;
 	esac
 	url="$GH_REPO/releases/download/v${new_version}/k3s${cpu_type}"
 
